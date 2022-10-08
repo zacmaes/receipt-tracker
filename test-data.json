@@ -6,9 +6,7 @@
         {"company":"Walmart","totalPrice":68.12,"date":"01/14/2022","city":"Vero Beach"},
         {"company":"Home Depot","totalPrice":209.34,"date":"01/23/2022","city":"Vero Beach"},
         {"company":"Home Depot","totalPrice":49.99,"date":"01/23/2022","city":"Sebastian"},
-        {"company":"Dick's","totalPrice":26.78,"date":"01/29/2022","city":"Seattle"},
-        
-
+        {"company":"Dick's","totalPrice":26.78,"date":"01/29/2022","city":"Seattle"}
     ]
 }
 
