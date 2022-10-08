@@ -1,0 +1,14 @@
+{
+    "receipts": [
+        {"company":"Sumo House","totalPrice":23.80,"date":"01/02/2022","city":"Vero Beach"},
+        {"company":"Petco","totalPrice":45.76,"date":"01/07/2022","city":"Vero Beach"},
+        {"company":"Publix","totalPrice":105.34,"date":"01/14/2022","city":"Vero Beach"},
+        {"company":"Walmart","totalPrice":68.12,"date":"01/14/2022","city":"Vero Beach"},
+        {"company":"Home Depot","totalPrice":209.34,"date":"01/23/2022","city":"Vero Beach"},
+        {"company":"Home Depot","totalPrice":49.99,"date":"01/23/2022","city":"Sebastian"},
+        {"company":"Dick's","totalPrice":26.78,"date":"01/29/2022","city":"Seattle"},
+        
+
+    ]
+}
+
