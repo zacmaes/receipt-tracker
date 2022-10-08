@@ -1,8 +1,5 @@
-p {
-    background-color: aqua;
-    color: gray;
+body {
+    background-color: #f6f9fc;  /* white with a greyish tint */
 }
 
-h1 {
-    color: blue;
-}
+
