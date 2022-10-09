@@ -5,11 +5,12 @@ const data = require('./test-data.json')    // Require the json receipt data
 const receipts = data.receipts  // assign the receipts array to a variable for ease of use
 
 // Instructions Code
-const instructions1 = "Hello there! My name is Zac."
-const instructions2 = "For the last year, my wife has been travel nursing, and we have been travelling around the United States while I complete my degree."
-const instructions3 = "The United States Internal Revenue Service (IRS) requires that we reside within our 'tax home' for 30 days per year."
-const instructions4 = "We have been keeping receipts from various locations for our records."
-const instructions5 = "This program saves receipt data in json format, runs calculations on the receipt data, and returns that information in the console."
+const instructions1 = `Hello there! My name is Zac.
+For the last year, my wife has been travel nursing, and we have been travelling around the United States while I complete my degree.
+The United States Internal Revenue Service (IRS) requires that we reside within our 'tax home' for 30 days per year.
+We have been keeping receipts from various locations for our records.
+This program saves receipt data in json format, runs calculations on the receipt data, and returns that information in the console.
+`;
 
 const linebreak     = "--------------------------------------------------------------------------------------------------------"
 const instructions_choice1 = "Please choose how many randomly selected, pre-entered receipts you would like to use in your calculations."
@@ -24,10 +25,114 @@ const enter_city = "city: "
 // {"company":"Wendys","totalPrice":55.55,"date":"09/24/2022","city":"Vero Beach"}
 
 
-const instructions = ""
+console.log(instructions1)
+
+
+// ----------I/O prompt------------
+const prompt = require('prompt');
+
+var schema = {
+    properties: {
+      proxy: {
+        description: 'Proxy url',
+      },
+      proxyCredentials: {
+        description: 'Proxy credentials',
+        ask: function() {
+          // only ask for proxy credentials if a proxy was set
+          return prompt.history('proxy').value > 0;
+        }
+      }
+    }
+  };
+
+  //
+  // Start the prompt
+  //
+  prompt.start();
+
+  //
+  // Get one or two properties from the user, depending on
+  // what the user answered for proxy
+  //
+  prompt.get(schema, function (err, result) {
+    //
+    // Log the results.
+    //
+    console.log('Command-line input received:');
+    console.log('  proxy: ' + result.proxy);
+    console.log('  credentials: ' + result.proxyCredentials);
+  });
 
 
 
+
+
+
+// const user_input_question = [
+//     {
+//       description: 'Do you want to enter your own receipts? ("true" = Yes | "false" = No): ',
+//       name: 'user_bool',
+//       type: 'boolean'
+//     }
+//   ];
+
+//   const no_input = [
+//     {
+//       description: 'How many receipts would you like to generate [1 - 42]: ',
+//       name: 'number_of_receipts',
+//       type: 'integer'
+//     }
+//   ];
+
+// // const properties = [
+// //   {
+// //     description: 'Select a number of pre-made receipts to use [0-42]: ',
+// //     name: 'number_of_receipts'
+// //   },
+// //   {
+// //     description: ''
+// //     name: 'user_receipts_bool',
+// //     hidden: true
+// //   }
+// // ];
+
+
+
+// prompt.start();
+
+// prompt.get(user_input_question, function (err, result) {
+//     if (err) {
+//       return onErr(err);
+//     }
+//     console.log('Command-line input received:');
+//     console.log('  Entering Own Receipts: ' + result.user_bool);
+//   });
+
+// prompt.get(no_input, function (err, result) {
+//     if (err) {
+//       return onErr(err);
+//     }
+//     console.log('Command-line input received:');
+//     console.log('  Program will generate this many receipts: ' + result.number_of_receipts);
+//   });
+
+// // prompt.get(properties, function (err, result) {
+// //   if (err) {
+// //     return onErr(err);
+// //   }
+// //   console.log('Command-line input received:');
+// //   console.log('  Username: ' + result.username);
+// //   console.log('  Password: ' + result.password);
+// // });
+
+function onErr(err) {
+  console.log(err);
+  return 1;
+}
+
+
+// ----------------------
 
 
 
@@ -75,9 +180,9 @@ let cityCount = () => {
     });
 }
 
-addTotalPrices()
+// addTotalPrices()
 
-cityCount()
+// cityCount()
 
 
 // Functionality to add:
