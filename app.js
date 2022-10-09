@@ -1,4 +1,4 @@
-// To run this code, type 'node app.js' in the REPL.IT Console.
+// To run this code, type 'node app.js' in the Console.
 
 const data = require('./test-data.json')    // Require the json receipt data
 
@@ -9,134 +9,11 @@ const instructions1 = `Hello there! My name is Zac.
 For the last year, my wife has been travel nursing, and we have been travelling around the United States while I complete my degree.
 The United States Internal Revenue Service (IRS) requires that we reside within our 'tax home' for 30 days per year.
 We have been keeping receipts from various locations for our records.
-This program saves receipt data in json format, runs calculations on the receipt data, and returns that information in the console.
+This program will calculate the total price and the number of days spent in each city.
+calculating...
 `;
-
-const linebreak     = "--------------------------------------------------------------------------------------------------------"
-const instructions_choice1 = "Please choose how many randomly selected, pre-entered receipts you would like to use in your calculations."
-const instructions_choice2 = "Select a number in range [1-42]: "
-const instructions_choice3 = "Optional choice: Do you want to enter your own receipts? (Y/N): "
-const instructions_choice4 = "Please enter the company name, total price, date, and city..."
-
-const enter_company = "company name: "
-const enter_price = "price: "
-const enter_date = "date (MM/DD/YYYY): "
-const enter_city = "city: "
-// {"company":"Wendys","totalPrice":55.55,"date":"09/24/2022","city":"Vero Beach"}
-
-
+console.log("------------------------------------------------------------------------")        
 console.log(instructions1)
-
-
-// ----------I/O prompt------------
-const prompt = require('prompt');
-
-var schema = {
-    properties: {
-      proxy: {
-        description: 'Proxy url',
-      },
-      proxyCredentials: {
-        description: 'Proxy credentials',
-        ask: function() {
-          // only ask for proxy credentials if a proxy was set
-          return prompt.history('proxy').value > 0;
-        }
-      }
-    }
-  };
-
-  //
-  // Start the prompt
-  //
-  prompt.start();
-
-  //
-  // Get one or two properties from the user, depending on
-  // what the user answered for proxy
-  //
-  prompt.get(schema, function (err, result) {
-    //
-    // Log the results.
-    //
-    console.log('Command-line input received:');
-    console.log('  proxy: ' + result.proxy);
-    console.log('  credentials: ' + result.proxyCredentials);
-  });
-
-
-
-
-
-
-// const user_input_question = [
-//     {
-//       description: 'Do you want to enter your own receipts? ("true" = Yes | "false" = No): ',
-//       name: 'user_bool',
-//       type: 'boolean'
-//     }
-//   ];
-
-//   const no_input = [
-//     {
-//       description: 'How many receipts would you like to generate [1 - 42]: ',
-//       name: 'number_of_receipts',
-//       type: 'integer'
-//     }
-//   ];
-
-// // const properties = [
-// //   {
-// //     description: 'Select a number of pre-made receipts to use [0-42]: ',
-// //     name: 'number_of_receipts'
-// //   },
-// //   {
-// //     description: ''
-// //     name: 'user_receipts_bool',
-// //     hidden: true
-// //   }
-// // ];
-
-
-
-// prompt.start();
-
-// prompt.get(user_input_question, function (err, result) {
-//     if (err) {
-//       return onErr(err);
-//     }
-//     console.log('Command-line input received:');
-//     console.log('  Entering Own Receipts: ' + result.user_bool);
-//   });
-
-// prompt.get(no_input, function (err, result) {
-//     if (err) {
-//       return onErr(err);
-//     }
-//     console.log('Command-line input received:');
-//     console.log('  Program will generate this many receipts: ' + result.number_of_receipts);
-//   });
-
-// // prompt.get(properties, function (err, result) {
-// //   if (err) {
-// //     return onErr(err);
-// //   }
-// //   console.log('Command-line input received:');
-// //   console.log('  Username: ' + result.username);
-// //   console.log('  Password: ' + result.password);
-// // });
-
-function onErr(err) {
-  console.log(err);
-  return 1;
-}
-
-
-// ----------------------
-
-
-
-
 
 let addTotalPrices = () => {
     // Function: 
@@ -145,15 +22,15 @@ let addTotalPrices = () => {
     // -adds the total prices to return the total expenditure.
 
     let runningTotal = 0
-    console.log(`New Total: ${runningTotal}`)
 
     for (let i = 0; i < receipts.length; i++) {
         runningTotal += receipts[i].totalPrice
-        console.log("------------------------------------------------------------------------")        
-        console.log(`Company name: ${receipts[i].company}, add: ${receipts[i].totalPrice} ...`)
-        console.log(`New Total: ${runningTotal}`)
-        console.log("------------------------------------------------------------------------")        
     }
+    console.log("------------------------------------------------------------------------")        
+    console.log(`Total Spent from all receipts: $${runningTotal}`)
+    console.log("------------------------------------------------------------------------")
+    console.log("------------------------------------------------------------------------")        
+
 }
 
 let cityCount = () => {
@@ -168,33 +45,78 @@ let cityCount = () => {
 
     receipts.forEach(element => {
         if (!(element.city in cities)) {    // If not in the cities object
-            console.log(`${element.city} is not inside cities object`)
             cities[element.city] = 1
-            console.log(cities)
 
         } else {
-            // console.log("else")
             cities[element.city] += 1
-            console.log(cities)
         }
     });
+    // Show final cities count
+    console.log(`You where in Vero Beach for ${cities['Vero Beach']} days this year`)
+    console.log(`You where in Sebastian for ${cities['Sebastian']} days this year`)
+    console.log(`You where in Seattle for ${cities['Seattle']} days this year`)
+    console.log(`You where in Fort Pierce for ${cities['Fort Pierce']} days this year`)
+    console.log(`You where in Port Saint Lucie for ${cities['Port Saint Lucie']} days this year`)
+    console.log("------------------------------------------------------------------------")        
+    console.log("Enter more receipts in the [test-data.json] file using the schema below:")        
+    console.log('   {"company":"Wendys","totalPrice":55.55,"date":"09/24/2022","city":"Vero Beach"}')
+    console.log("------------------------------------------------------------------------")        
 }
 
-// addTotalPrices()
-
-// cityCount()
-
-
-// Functionality to add:
-// -make more receipt data available for use
-// -Instructions/Intro in console at beginning
-// -How many receipts would you like to add? 1 - 30??? whatever the top number is
-// -Print:
-//      -table of all prices
-//      -final Total count of prices
-//      -days in each city
-//      -how many days left for 30 days total
-//      -input your own receipts
+// Function calls
+addTotalPrices()
+cityCount()
 
 
-//SHOULD HAVE 29 VERO BEACH ENTRIES IN TEST DATA
+
+// ----------I/O prompt --- Did not Finish :( ------------
+
+// *** Here is my unfinished code using the npm package 'prompt' ***
+
+//          Analysis: Tried to implement this too late, I did not realize collecting 
+//                      user input in the node console would be this challenging.
+
+// const prompt = require('prompt');
+
+// const user_input_questions = [
+//     {
+//       description: 'Do you want to enter your own receipts? ("true" = Yes | "false" = No): ',
+//       name: 'user_bool',
+//       type: 'boolean'
+//     },
+//     {
+//         description: 'Enter the company name: ',
+//         name: 'company_name',
+//         type: 'integer',
+//         ask: function() {
+//           // only ask for proxy credentials if a proxy was set
+//           return prompt.history('user_bool').value > 0;
+//         }
+//       }
+//     {
+//         description: 'How many receipts would you like to generate [1 - 42]: ',
+//         name: 'number_of_receipts',
+//         type: 'integer',
+//         ask: function() {
+//           // only ask for proxy credentials if a proxy was set
+//           return prompt.history('user_bool').value > 0;
+//         }
+//       }
+//   ];
+
+// prompt.start();
+
+// prompt.get(user_input_questions, function (err, result) {
+//     if (err) {
+//       return onErr(err);
+//     }
+//     console.log('Command-line input received:');
+//     console.log('  Entering Own Receipts: ' + result.user_bool);
+//     console.log('  Program will generate this many receipts: ' + result.number_of_receipts);
+
+//   });
+
+// function onErr(err) {
+//   console.log(err);
+//   return 1;
+// }
