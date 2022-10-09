@@ -1,14 +1,17 @@
-console.log("It's alive!")
+// To run this code, type 'node app.js' in the REPL.IT Console.
 
-const data = require('./test-data.json')
+const data = require('./test-data.json')    // Require the json receipt data
 
-const receipts = data.receipts  // the receipts array
+const receipts = data.receipts  // assign the receipts array to a variable for ease of use
 
 let addTotalPrices = () => {
-    // loops through json and adds the total prices to return the total expenditure.
+    // Function: 
+    // -assigns a runningTotal count to 0
+    // -loops through the receipts array
+    // -adds the total prices to return the total expenditure.
 
     let runningTotal = 0
-    console.log(runningTotal)
+    console.log(`New Total: ${runningTotal}`)
 
     for (let i = 0; i < receipts.length; i++) {
         runningTotal += receipts[i].totalPrice
@@ -43,6 +46,17 @@ let cityCount = () => {
     });
 }
 
-// addTotalPrices()
+addTotalPrices()
 
 cityCount()
+
+
+// Functionality to add:
+// -make more receipt data available for use
+// -Instructions/Intro in console at beginning
+// -How many receipts would you like to add? 1 - 30??? whatever the top number is
+// -Print:
+//      -table of all prices
+//      -final Total count of prices
+//      -days in each city
+//      -how many days left for 30 days total
