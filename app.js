@@ -1,4 +1,5 @@
 // To run this code, type 'node app.js' in the Console.
+// Please note: the html file does not do anything...
 
 const data = require('./test-data.json')    // Require the json receipt data
 
@@ -8,9 +9,8 @@ const receipts = data.receipts  // assign the receipts array to a variable for e
 const instructions1 = `Hello there! My name is Zac.
 For the last year, my wife has been travel nursing, and we have been travelling around the United States while I complete my degree.
 The United States Internal Revenue Service (IRS) requires that we reside within our 'tax home' for 30 days per year.
-We have been keeping receipts from various locations for our records.
+We have been keeping receipts from various locations for our records. This app uses a suite of test receipts as an example.
 This program will calculate the total price and the number of days spent in each city.
-calculating...
 `;
 console.log("------------------------------------------------------------------------")        
 console.log(instructions1)
