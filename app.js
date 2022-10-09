@@ -28,6 +28,21 @@ let cityCount = () => {
     //      else add 1 to the value of this city instance key in cities object
 
     // print the total days spent in each city based upon the receipts
+
+    receipts.forEach(element => {
+        if (!(element.city in cities)) {    // If not in the cities object
+            console.log(`${element.city} is not inside cities object`)
+            cities[element.city] = 1
+            console.log(cities)
+
+        } else {
+            // console.log("else")
+            cities[element.city] += 1
+            console.log(cities)
+        }
+    });
 }
 
-addTotalPrices()
+// addTotalPrices()
+
+cityCount()
