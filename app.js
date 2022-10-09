@@ -12,11 +12,19 @@ const instructions4 = "We have been keeping receipts from various locations for 
 const instructions5 = "This program saves receipt data in json format, runs calculations on the receipt data, and returns that information in the console."
 
 const linebreak     = "--------------------------------------------------------------------------------------------------------"
-const 
+const instructions_choice1 = "Please choose how many randomly selected, pre-entered receipts you would like to use in your calculations."
+const instructions_choice2 = "Select a number in range [1-42]: "
+const instructions_choice3 = "Optional choice: Do you want to enter your own receipts? (Y/N): "
+const instructions_choice4 = "Please enter the company name, total price, date, and city..."
 
-const instructions5 = ""
+const enter_company = "company name: "
+const enter_price = "price: "
+const enter_date = "date (MM/DD/YYYY): "
+const enter_city = "city: "
+// {"company":"Wendys","totalPrice":55.55,"date":"09/24/2022","city":"Vero Beach"}
 
 
+const instructions = ""
 
 
 
