@@ -5,8 +5,52 @@
         {"company":"Publix","totalPrice":105.34,"date":"01/14/2022","city":"Vero Beach"},
         {"company":"Walmart","totalPrice":68.12,"date":"01/14/2022","city":"Vero Beach"},
         {"company":"Home Depot","totalPrice":209.34,"date":"01/23/2022","city":"Vero Beach"},
-        {"company":"Home Depot","totalPrice":49.99,"date":"01/23/2022","city":"Sebastian"},
-        {"company":"Dick's","totalPrice":26.78,"date":"01/29/2022","city":"Seattle"}
+        
+        {"company":"Home Depot","totalPrice":49.99,"date":"02/03/2022","city":"Sebastian"},
+        {"company":"Dick's","totalPrice":26.78,"date":"02/05/2022","city":"Seattle"},
+        {"company":"Albertsons","totalPrice":235.78,"date":"02/08/2022","city":"Vero Beach"},
+        {"company":"Burlington","totalPrice":123.56,"date":"02/10/2022","city":"Vero Beach"},
+        {"company":"Carters","totalPrice":23.33,"date":"02/11/2022","city":"Vero Beach"},
+
+        {"company":"Dillards","totalPrice":409.99,"date":"03/01/2022","city":"Vero Beach"},
+        {"company":"El Jalisco","totalPrice":46.78,"date":"03/10/2022","city":"Vero Beach"},
+        {"company":"Fat Tuesdays","totalPrice":34.65,"date":"03/15/2022","city":"Sebastian"},
+        {"company":"Goodwill","totalPrice":13.99,"date":"03/16/2022","city":"Seattle"},
+        {"company":"Home Goods","totalPrice":66.98,"date":"03/20/2022","city":"Vero Beach"},
+        
+        {"company":"iFixit","totalPrice":19.99,"date":"04/07/2022","city":"Vero Beach"},
+        {"company":"Jersey Mikes","totalPrice":32.87,"date":"04/14/2022","city":"Vero Beach"},
+        {"company":"Kilwins","totalPrice":4.78,"date":"04/21/2022","city":"Vero Beach"},
+        {"company":"Lowes","totalPrice":84.34,"date":"04/28/2022","city":"Vero Beach"},
+        {"company":"McDonalds","totalPrice":22.34,"date":"04/30/2022","city":"Sebastian"},
+
+        {"company":"Nordstrom","totalPrice":86.99,"date":"05/12/2022","city":"Seattle"},
+        {"company":"Chipotle","totalPrice":34.78,"date":"05/14/2022","city":"Vero Beach"},
+        {"company":"Pet Supermarket","totalPrice":79.23,"date":"05/16/2022","city":"Vero Beach"},
+        {"company":"Quality In","totalPrice":344.23,"date":"05/18/2022","city":"Vero Beach"},
+        {"company":"Red Lobster","totalPrice":58.10,"date":"05/31/2022","city":"Vero Beach"},
+
+        {"company":"Stumptown Coffee","totalPrice":17.87,"date":"06/01/2022","city":"Seattle"},
+        {"company":"Trader Joes","totalPrice":73.35,"date":"06/02/2022","city":"Seattle"},
+        {"company":"Uncle Mikes Burgers","totalPrice":41.67,"date":"06/03/2022","city":"Fort Pierce"},
+        {"company":"Vincents Pizza","totalPrice":30.00,"date":"06/04/2022","city":"Port Saint Lucie"},
+        {"company":"Wendys","totalPrice":14.56,"date":"06/05/2022","city":"Vero Beach"},
+        
+        {"company":"5 Below","totalPrice":4.99,"date":"07/06/2022","city":"Vero Beach"},
+        {"company":"Chipotle","totalPrice":42.42,"date":"07/07/2022","city":"Vero Beach"},
+        {"company":"Pet Supermarket","totalPrice":90.21,"date":"07/08/2022","city":"Vero Beach"},
+        {"company":"Quality In","totalPrice":134.87,"date":"07/09/2022","city":"Vero Beach"},
+        {"company":"Red Lobster","totalPrice":78.55,"date":"07/10/2022","city":"Vero Beach"},
+
+        {"company":"Stumptown Coffee","totalPrice":21.44,"date":"08/11/2022","city":"Seattle"},
+        {"company":"Trader Joes","totalPrice":67.93,"date":"08/12/2022","city":"Seattle"},
+        {"company":"Uncle Mikes Burgers","totalPrice":33.33,"date":"08/13/2022","city":"Fort Pierce"},
+        {"company":"Vincents Pizza","totalPrice":44.44,"date":"08/14/2022","city":"Vero Beach"},
+        {"company":"Wendys","totalPrice":55.55,"date":"08/15/2022","city":"Vero Beach"},
+
+        {"company":"Wendys","totalPrice":55.55,"date":"08/15/2022","city":"Vero Beach"},
+        {"company":"Wendys","totalPrice":55.55,"date":"08/15/2022","city":"Vero Beach"}
+
     ]
 }
 

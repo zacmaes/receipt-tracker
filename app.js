@@ -60,3 +60,7 @@ cityCount()
 //      -final Total count of prices
 //      -days in each city
 //      -how many days left for 30 days total
+//      -input your own receipts
+
+
+//SHOULD HAVE 29 VERO BEACH ENTRIES IN TEST DATA
